@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=.0, user-scalable=no"/>
+		<title>亿奢汇-发现</title> 
+    	<link href="../../../com/css/mui.min.css" rel="stylesheet"/>
+		<link href="../../../css/discover/discoverSub/discoverSub.css" rel="stylesheet"/>
+		<link href="../../../com/css/iconfont.css" rel="stylesheet"/>
+		<link href="../../../com/css/com.css" rel="stylesheet"/>
+		
+		
+    	<script type="text/javascript">
+	       	//document.documentElement.style.fontSize = document.documentElement.clientWidth / 750*100 + 'px';
+	       	//designWidth:设计稿的实际宽度值，需要根据实际设置
+			//maxWidth:制作稿的最大宽度值，需要根据实际设置
+			//这段js的最后面有两个参数记得要设置，一个为设计稿实际宽度，一个为制作稿最大宽度，例如设计稿为750，最大宽度为750，则为(750,750)
+			;(function(designWidth, maxWidth) {
+				var doc = document,
+				win = window,
+				docEl = doc.documentElement,
+				remStyle = document.createElement("style"),
+				tid;
+			
+				function refreshRem() {
+					var width = docEl.getBoundingClientRect().width;
+					maxWidth = maxWidth || 540;
+					width>maxWidth && (width=maxWidth);
+					var rem = width * 100 / designWidth;
+					remStyle.innerHTML = 'html{font-size:' + rem + 'px;}';
+				}
+			
+				if (docEl.firstElementChild) {
+					docEl.firstElementChild.appendChild(remStyle);
+				} else {
+					var wrap = doc.createElement("div");
+					wrap.appendChild(remStyle);
+					doc.write(wrap.innerHTML);
+					wrap = null;
+				}
+				//要等 wiewport 设置好后才能执行 refreshRem，不然 refreshRem 会执行2次；
+				refreshRem();
+			
+				win.addEventListener("resize", function() {
+					clearTimeout(tid); //防止执行两次
+					tid = setTimeout(refreshRem, 300);
+				}, false);
+			
+				win.addEventListener("pageshow", function(e) {
+					if (e.persisted) { // 浏览器后退的时候重新计算
+						clearTimeout(tid);
+						tid = setTimeout(refreshRem, 300);
+					}
+				}, false);
+			
+				if (doc.readyState === "complete") {
+					doc.body.style.fontSize = "16px";
+				} else {
+					doc.addEventListener("DOMContentLoaded", function(e) {
+						doc.body.style.fontSize = "16px";
+					}, false);
+				}
+			})(750, 750);
+	    </script>
+	</head>
+	<body>
+		<div id="pullrefresh" class="mui-content mui-scroll-wrapper pageOneIndexFresh">
+			<div class="mui-scroll">
+				<div class="discoverMain">
+					<div class="discoverTop">
+						<img src="../../../image/faxianTop.png" />
+					</div>
+					<div class="mui-card discoverModule">
+						<h4 class="discoverModuleH4">热点</h4>
+						<div class="mui-card-header mui-card-media" style="height:218px;background-image:url(../../../image/discover1.jpg)"></div>
+						<div class="mui-card-content discoverCardTitle">
+							<div class="mui-card-content-inner">
+								<p class="discoverCardTitleH3">Coach蔻驰让你野性回归</p>
+								<p>做一个特立独行的自己</p>
+							</div>
+						</div>
+					</div>
+					<div class="comHeight"></div>
+					<div class="mui-card discoverModule">
+						<h4 class="discoverModuleH4">优选</h4>
+						<div class="mui-card-header mui-card-media" style="height:218px;background-image:url(../../../image/discover2.jpg)"></div>
+						<div class="mui-card-content discoverCardTitle">
+							<div class="mui-card-content-inner">
+								<p class="discoverCardTitleH3">Coach蔻驰让你野性回归</p>
+								<p>做一个特立独行的自己</p>
+							</div>
+						</div>
+					</div>
+					<div class="comHeight"></div>
+					<div class="mui-card discoverModule">
+						<h4 class="discoverModuleH4">风格</h4>
+						<div class="mui-card-header mui-card-media" style="height:218px;background-image:url(../../../image/discover3.jpg)"></div>
+						<div class="mui-card-content discoverCardTitle">
+							<div class="mui-card-content-inner">
+								<p class="discoverCardTitleH3">Coach蔻驰让你野性回归</p>
+								<p>做一个特立独行的自己</p>
+							</div>
+						</div>
+					</div>
+					<div class="comHeight"></div>
+					<div class="mui-card discoverModule">
+						<h4 class="discoverModuleH4">品牌</h4>
+						<div class="mui-card-header mui-card-media" style="height:218px;background-image:url(../../../image/discover4.jpg)"></div>
+						<div class="mui-card-content discoverCardTitle">
+							<div class="mui-card-content-inner">
+								<p class="discoverCardTitleH3">Coach蔻驰让你野性回归</p>
+								<p>做一个特立独行的自己</p>
+							</div>
+						</div>
+					</div>
+					<div class="comHeight"></div>
+					<div class="mui-card discoverModule">
+						<h4 class="discoverModuleH4">生活</h4>
+						<div class="mui-card-header mui-card-media" style="height:218px;background-image:url(../../../image/discover5.jpg)"></div>
+						<div class="mui-card-content discoverCardTitle">
+							<div class="mui-card-content-inner">
+								<p class="discoverCardTitleH3">Coach蔻驰让你野性回归</p>
+								<p>做一个特立独行的自己</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="../../../com/js/jquery-2.2.4-.min.js"></script>
+    	<script src="../../../com/js/mui.min.js"></script>
+    	<script src="../../../com/js/com.js"></script>
+		<script src="../../../js/discover/discoverSub/discoverSub.js"></script>
+	</body>
+</html>

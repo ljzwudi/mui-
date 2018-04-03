@@ -1,0 +1,91 @@
+.mui-bar-nav.mui-bar .mui-icon {
+    margin-right: -0.2rem;
+    margin-left: -0.2rem;
+    padding-right: 0.2rem;
+    padding-left: 0.2rem;
+    font-size: 0.48rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+}
+.mui-bar-nav~.mui-content .mui-pull-top-pocket {
+    top: 0.88rem;
+}
+
+.mui-bar {
+    height: 0.88rem;
+    padding-right: 0.2rem;
+    padding-left: 0.2rem;
+    background-color: #ffffff;
+}
+.mui-bar .mui-title {
+    right: 0.8rem;
+    left: 0.8rem;
+    font-size: 0.34rem;
+    line-height: 0.93rem;
+}
+.discoverTop{
+	padding-bottom: 0.2rem;
+}
+.discoverTop img{
+	
+width: 100%;
+}
+
+.pageOneIndexFresh{
+	background-color: #ffffff;
+}
+.discoverMain{
+	padding-bottom: 0;
+	position: relative;
+	z-index: 1;
+	
+}
+.discoverCardTitle{
+	text-align: center;
+	font-size: 0.28rem;
+}
+.discoverCardTitle p{
+	color: #666666;
+	font-size: 0.24rem;
+}
+.discoverCardTitle .discoverCardTitleH3{
+	color: #333333;
+	font-size: 0.34rem;
+	line-height: 0.68rem;
+	font-weight: 500;
+}
+
+.mui-card {
+     box-shadow: none;
+     margin-top: 0;
+}
+
+.discoverModule{
+	position: relative;
+	margin: 0 0.2rem 0.2rem 0.2rem;
+	font-size: 0.28rem;
+}
+.discoverModuleH4 {
+    font-size: 0.26rem;
+    position: absolute;
+    top: 0.4rem;
+    z-index: 1;
+    background: url(../../image/discoverModuleBg.png) no-repeat;
+    background-size: 100% 100%;
+    width: 0.84rem;
+    height: 0.5rem;
+    color: #fff;
+    line-height: 0.5rem;
+    text-indent: 0.12rem;
+    font-weight: 500;
+}
+
+
+.mui-card-content-inner {
+    padding: 0.26rem 0 0.26rem;
+}
+
+.mui-card-header.mui-card-media {
+    margin-top: 0.2rem;
+    padding: 0.2rem;
+}

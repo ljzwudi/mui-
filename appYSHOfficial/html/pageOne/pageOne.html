@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=.0, user-scalable=no"/>
+		<title>亿奢汇-首页</title> 
+    	<link href="../../com/css/mui.min.css" rel="stylesheet"/>
+		<link href="../../css/pageOne/pageOne.css" rel="stylesheet"/>
+		<link href="../../com/css/iconfont.css" rel="stylesheet"/>
+		<link href="../../com/css/com.css" rel="stylesheet"/>
+		<script type="text/javascript">
+	       	//document.documentElement.style.fontSize = document.documentElement.clientWidth / 750*100 + 'px';
+	       		//designWidth:设计稿的实际宽度值，需要根据实际设置
+			//maxWidth:制作稿的最大宽度值，需要根据实际设置
+			//这段js的最后面有两个参数记得要设置，一个为设计稿实际宽度，一个为制作稿最大宽度，例如设计稿为750，最大宽度为750，则为(750,750)
+			(function(designWidth, maxWidth) {
+				var doc = document,
+				win = window,
+				docEl = doc.documentElement,
+				remStyle = document.createElement("style"),
+				tid;
+			
+				function refreshRem() {
+					var width = docEl.getBoundingClientRect().width;
+					maxWidth = maxWidth || 540;
+					width>maxWidth && (width=maxWidth);
+					var rem = width * 100 / designWidth;
+					remStyle.innerHTML = 'html{font-size:' + rem + 'px;}';
+				}
+			
+				if (docEl.firstElementChild) {
+					docEl.firstElementChild.appendChild(remStyle);
+				} else {
+					var wrap = doc.createElement("div");
+					wrap.appendChild(remStyle);
+					doc.write(wrap.innerHTML);
+					wrap = null;
+				}
+				//要等 wiewport 设置好后才能执行 refreshRem，不然 refreshRem 会执行2次；
+				refreshRem();
+			
+				win.addEventListener("resize", function() {
+					clearTimeout(tid); //防止执行两次
+					tid = setTimeout(refreshRem, 300);
+				}, false);
+			
+				win.addEventListener("pageshow", function(e) {
+					if (e.persisted) { // 浏览器后退的时候重新计算
+						clearTimeout(tid);
+						tid = setTimeout(refreshRem, 300);
+					}
+				}, false);
+			
+				if (doc.readyState === "complete") {
+					doc.body.style.fontSize = "16px";
+				} else {
+					doc.addEventListener("DOMContentLoaded", function(e) {
+						doc.body.style.fontSize = "16px";
+					}, false);
+				}
+			})(750, 750);
+	    </script>
+		
+	</head>
+	<body class="pageOneBody">
+		<header class="mui-bar mui-bar-nav">
+		    <i class="mui-icon iconfont icon-xiaoxi001 mui-pull-left"></i>
+            <div class="mui-input-row mui-search">
+				<input type="search" class="mui-input-clear" placeholder="搜索：分类 品牌 系列 商品" />
+			</div>
+		    <i class="mui-icon iconfont icon-gouwuche mui-pull-right"></i>
+		</header>
+		<div class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted pageOneTopScrollMain" id="pageOneTopScrollMain">
+		    <div class="mui-scroll">
+		        <a class="mui-control-item mui-active">
+		            <p>首页</p>		            
+		        </a>
+		        <a class="mui-control-item">
+		            <p>新品</p>
+		        </a>
+		        <a class="mui-control-item">
+		            <p>美妆</p>
+		        </a>
+		        <a class="mui-control-item">
+		            <p>女士</p>
+		        </a>
+		        <a class="mui-control-item">
+		           <p> 男士</p>
+		        </a>
+		        <a class="mui-control-item">
+		            <p>奢包</p>
+		        </a>
+		        <a class="mui-control-item">
+		            <p>线下店</p>
+		        </a>
+		        <a class="mui-control-item">
+		            <p>直邮</p>
+		        </a>
+		    </div>
+		</div>
+		
+		<script src="../../com/js/jquery-2.2.4-.min.js"></script>
+    	<script src="../../com/js/mui.min.js"></script>
+		<script src="../../js/pageOne/pageOne.js"></script>
+	</body>
+</html>

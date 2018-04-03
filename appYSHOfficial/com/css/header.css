@@ -1,0 +1,72 @@
+
+.mui-bar input[type=search] {
+    height: 0.62rem;
+    margin: 0.13rem 0;
+    font-size: 0.28rem;
+    border-radius: 0.03rem;
+}
+.mui-search {
+    position: relative;
+    right: 0.36rem;
+    left: 0.1rem;
+    display: inline-block;
+    overflow: hidden;
+    margin: 0;
+    text-overflow: ellipsis;
+    width: 5.98rem;
+    height: 100%;
+}
+.mui-search .mui-placeholder{
+	font-size: 0.28rem;
+	line-height: 0.32rem;
+	height: 0.32rem;
+	border-radius: 0.06rem;
+}
+
+input[type=search] {
+    background-color: #f0f0f0;
+    color: #8f8f8f;
+}
+.mui-bar-nav.mui-bar .mui-icon {
+    margin-right: -0.1rem;
+    margin-left: -0.1rem;
+    padding-right: 0.1rem;
+    padding-left: 0.1rem;
+}
+.mui-bar .mui-icon {
+    font-size: 0.39rem;
+    position: relative;
+    z-index: 20;
+    padding-top: 0.25rem;
+    padding-bottom: 0.1rem;
+}
+
+.mui-bar {
+    height: 0.88rem;
+    overflow: hidden;
+    padding-right: 0.2rem;
+    padding-left: 0.2rem;
+}
+
+.mui-search .mui-placeholder .mui-icon{
+	font-size: 0.4rem;
+}
+
+.mui-bar {
+    background-color: #ffffff;
+    -webkit-box-shadow: 0 0 0px rgba(0,0,0,.85);
+    box-shadow: 0 0 0px rgba(0,0,0,.85);
+}
+.mui-bar .icon-gouwuche{
+	font-size: 0.48rem;
+	    padding: 0.2rem 0;
+}
+
+.mui-bar .icon-xiaoxi001{
+	font-size: 0.48rem;
+	 padding-top: 0.2rem;
+}
+.mui-action-back{
+	height: 100%;
+}
+

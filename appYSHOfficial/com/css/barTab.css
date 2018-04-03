@@ -1,0 +1,17 @@
+.mui-bar-tab {
+    height: 1rem;
+}
+.mui-bar-tab .mui-tab-item{
+	height: 1rem;
+}
+.mui-bar-tab .mui-tab-item .mui-icon {
+    top: 0.06rem;
+    width: 0.48rem;
+    height: 0.48rem;
+}
+.mui-bar .mui-icon {
+    font-size: 0.48rem;
+}
+.mui-bar-tab .mui-tab-item .mui-icon~.mui-tab-label {
+    font-size: 0.22rem;
+}

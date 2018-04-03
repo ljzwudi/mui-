@@ -1,0 +1,63 @@
+
+body{
+	background-color: #ffffff;
+}
+a{
+	color: #333333;
+}
+*{
+	padding: 0;
+	margin: 0;
+}
+p,span,h1,h3,h4,h5,s{
+	padding: 0;
+	margin: 0;
+}
+
+.clearfix:after {
+content: "\0020";
+display: block;
+height: 0;
+clear: both;
+}
+.clearfix {
+zoom: 1;
+}
+
+
+ul{
+	padding: 0;
+	margin: 0;
+}
+li{
+	list-style-type:none;
+}
+
+
+.comHeight{
+	 background-color: #f7f7f7;height: 10px;z-index: 100;    position: relative;
+}
+
+.mui-pull-caption {
+    font-size: 0.3rem;
+    line-height: 0.48rem;
+}
+
+.mui-pull-bottom-pocket {
+    height: 0.8rem;
+}
+
+.mui-pull {
+    bottom: 0.25rem;
+}
+.mui-icon {
+    font-size: 0.48rem;
+}
+
+.mui-pull-bottom-pocket, .mui-pull-top-pocket {
+    height: 1rem;
+}
+.mui-pull-top-pocket {
+    /*top: 0rem;*/
+    z-index: 100000000000000000;
+}

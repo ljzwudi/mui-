@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>商品详情</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<!--标准mui.css-->
+		<link href="../../com/css/mui.min.css" rel="stylesheet"/>
+		<link href="../../com/css/iconfont.css" rel="stylesheet"/>
+		<link href="../../css/pageOne/pageOne.css" rel="stylesheet"/>
+		<link href="../../css/shopdetail/shopdetail.css" rel="stylesheet"/>
+		<!--App自定义的css-->
+		
+		<style>
+			
+		</style>
+		<script type="text/javascript">
+	        //document.documentElement.style.fontSize = document.documentElement.clientWidth / 750*75 + 'px';
+	        //document.documentElement.style.fontSize = document.documentElement.clientWidth / 750*100 + 'px';
+	        //designWidth:设计稿的实际宽度值，需要根据实际设置
+			//maxWidth:制作稿的最大宽度值，需要根据实际设置
+			//这段js的最后面有两个参数记得要设置，一个为设计稿实际宽度，一个为制作稿最大宽度，例如设计稿为750，最大宽度为750，则为(750,750)
+			;(function(designWidth, maxWidth) {
+				var doc = document,
+				win = window,
+				docEl = doc.documentElement,
+				remStyle = document.createElement("style"),
+				tid;
+			
+				function refreshRem() {
+					var width = docEl.getBoundingClientRect().width;
+					maxWidth = maxWidth || 750;
+					width>maxWidth && (width=maxWidth);
+					var rem = width * 75 / designWidth;
+					remStyle.innerHTML = 'html{font-size:' + rem + 'px;}';
+				}
+			
+				if (docEl.firstElementChild) {
+					docEl.firstElementChild.appendChild(remStyle);
+				} else {
+					var wrap = doc.createElement("div");
+					wrap.appendChild(remStyle);
+					doc.write(wrap.innerHTML);
+					wrap = null;
+				}
+				//要等 wiewport 设置好后才能执行 refreshRem，不然 refreshRem 会执行2次；
+				refreshRem();
+			
+				win.addEventListener("resize", function() {
+					clearTimeout(tid); //防止执行两次
+					tid = setTimeout(refreshRem, 300);
+				}, false);
+			
+				win.addEventListener("pageshow", function(e) {
+					if (e.persisted) { // 浏览器后退的时候重新计算
+						clearTimeout(tid);
+						tid = setTimeout(refreshRem, 300);
+					}
+				}, false);
+			
+				if (doc.readyState === "complete") {
+					doc.body.style.fontSize = "16px";
+				} else {
+					doc.addEventListener("DOMContentLoaded", function(e) {
+						doc.body.style.fontSize = "16px";
+					}, false);
+				}
+			})(750, 750);
+	    </script>
+	</head>
+
+	<body>
+		<header class="mui-bar ">
+			<i class="messageIcon iconfont icon-back"></i>
+
+			<a style="color: #000000;" class=" mui-action-back"><i class="messageIcon iconfont icon-back"></i></a>
+
+			<h1 class="mui-title">详情页</h1>
+			<a href="#shareBar"><i class="shopping iconfont icon-fenxiang" id="share"></i></a>
+		</header>
+		
+		<div class="mui-content mui-row " id= 'pullrefresh' >
+			<div class="mui-scroll">
+				<div id="slider" class="mui-slider " >
+				    <div class="mui-slider-group mui-slider-loop">
+				        <!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+				        <div class="mui-slider-item mui-slider-item-duplicate">
+					        <a href="#">
+					           <img src="../../image/images/shopdetail/shopdetail-banner3.png">
+					        </a>
+				        </div>
+				        <!-- 第一张 -->
+				        <div class="mui-slider-item">
+				          	<a href="#">
+				            	<img src="../../image/images/shopdetail/shopdetail-banner1.png">
+				          	</a>
+				        </div>
+				        <!-- 第二张 -->
+				        <div class="mui-slider-item">
+				          	<a href="#">
+				            	<img src="../../image/images/shopdetail/shopdetail-banner2.png">
+				          	</a>
+				        </div>
+				        <!-- 第三张 -->
+				        <div class="mui-slider-item">
+				          	<a href="#">
+				            	<img src="../../image/images/shopdetail/shopdetail-banner3.png">
+				          	</a>
+				        </div>
+				        <!-- 第四张 -->
+				        <!--<div class="mui-slider-item">
+				          <a href="#">
+				            <img src="../images/muwu.jpg">
+				          </a>
+				        </div>-->
+				        <!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+				        <div class="mui-slider-item mui-slider-item-duplicate">
+				          	<a href="#">
+				            	<img src="../../image/images/shopdetail/shopdetail-banner1.png">
+				          	</a>
+				        </div>
+				    </div>
+			      	<div class="mui-slider-indicator">
+			        	<div class="mui-indicator mui-active"></div>
+				        <div class="mui-indicator"></div>
+				        <div class="mui-indicator"></div>
+				        <!--<div class="mui-indicator"></div>-->
+			      	</div>
+				</div>
+				<div class="detailContent">
+					<div class="detailPrice">
+						<span class="detailPriceShow">￥ <span>14,089</span></span>
+						<span class="detailCome">海外</span>
+					</div>
+					<div class="detailTitle">
+						<div class="detailMarketPrice">市场价:￥<span>28,179</span></div>
+						<div class="detailYishou">已售<span class="detailNum">8</span>件</div>
+					</div>
+					<div class="detailName">
+						<div class="detailNameTitle">PRADA 普拉达&nbsp;&nbsp;&nbsp;&nbsp;女士 Cahier 当季新品图案刺绣手袋</div>
+						<p><i class="iconfont icon-jinggao"></i><span>本商品售价已含税，无需另外支付税费</span></p>
+						<p><i class="iconfont icon-peisongfangshiicon"></i><span>该商品支持快递配送</span></p>
+					</div>
+				</div>
+				<div class="detailTotal">
+					<div class="detailTotalLeft">
+						<img src="../../image/images/shopdetail/logo_03.jpg" / >
+						<span>Prada普拉达</span>
+					</div>
+					<div class="detailTotalRight">
+						<span>共有商品64件 <i class="iconfont icon-youjiantou"></i></span>
+					</div>
+				</div>
+				<div class="detailUser">
+					<div class="detailUserLeft">
+						<span>用户评价 (<span>24</span>)</span>
+					</div>
+					<div class="detailUserRight">
+						<span><i class="iconfont icon-youjiantou"></i></span>
+					</div>
+				</div>
+				<div class="detailOption">
+					<div class="detailOptionHengLeft"></div>
+					<div class="detailOptionPull">继续拖动，查看图文详情</div>
+					<div class="detailOptionHengRight"></div>
+				</div>
+				<div class="detailImgShow">
+					<img src="../../image/images/shopdetail/shopdetail.jpg" />
+				</div>
+			</div>
+		</div>
+		<div class="bottomBar">
+			<div class="detailBottomBarLeft">
+				<div class="detailBottomLeftCom">
+					<div class="detailBottomLeftComImg"><i class=" iconfont icon-fuwuerji"></i></div>
+					<div>导购</div>
+				</div>
+				<div class="detailBottomLeftCom">
+					<div class="detailBottomLeftComImg"><i class=" iconfont icon-wujiaoxingkong"></i></div>
+					<div>收藏</div>
+				</div>
+				<div class="detailBottomLeftCom" id="shopping">
+					<div class="detailBottomLeftComImg"><i class=" iconfont icon-gouwuche"></i></div>
+					<div style="color: #000000;">购物车</div>
+				</div>
+			</div>
+			
+			<div class="detailBottomBarRight">
+				<div class="detailBottomRightInsert detailBottomRight">加入购物车</div>
+				<div class="detailBottomRightSell detailBottomRight">立即购买</div>
+			</div>
+		</div>
+		
+		<div id="shareBar" class="box mui-popover mui-popover-action mui-popover-bottom">
+			<div class="shareBar" id="" style="position: absolute;background: #ffffff;width: 100%;height: 4rem;bottom:0rem;z-index: 100;">
+				<div style="float: left;margin-right: 1rem;" id="friend">微信好友</div>
+				<div style="float: left;margin-right: 1rem;" id="quan">朋友圈</div>
+			</div>
+		</div>
+		<script src="../../com/js/jquery-2.2.4-.min.js"></script>
+    	<script src="../../com/js/mui.min.js"></script>
+		<script src="../../js/shopdetail/shopdetail.js"></script>
+		<script>
+			
+		</script>
+	</body>
+
+</html>
+

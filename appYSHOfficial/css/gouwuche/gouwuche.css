@@ -1,0 +1,448 @@
+*{margin:0;padding: 0;font-family: "苹方";}
+@media (min-width: 320px) {
+	html {
+		font-size: 32px;
+	}
+}
+
+@media (min-width: 360px) {
+	html {
+		font-size: 36px;
+	}
+}
+
+@media (min-width: 375px) {
+	html {
+		font-size: 37.5px;
+	}
+}
+
+@media (min-width: 384px) {
+	html {
+		font-size: 38.5px;
+	}
+}
+
+@media (min-width: 414px) {
+	html {
+		font-size: 41.4px;
+	}
+}
+
+@media (min-width: 448px) {
+	html {
+		font-size: 44.8px;
+	}
+}
+
+@media (min-width: 480px) {
+	html {
+		font-size: 48px;
+	}
+}
+
+@media (min-width: 512px) {
+	html {
+		font-size: 51.2px;
+	}
+}
+
+@media (min-width: 544px) {
+	html {
+		font-size: 54.4px;
+	}
+}
+
+@media (min-width: 576px) {
+	html {
+		font-size: 57.6px;
+	}
+}
+
+@media (min-width: 608px) {
+	html {
+		font-size: 60.8px;
+	}
+}
+
+@media (min-width: 640px) {
+	html {
+		font-size: 64px;
+	}
+}
+
+@media (min-width: 750px) {
+	html {
+		font-size: 75px;
+	}
+}
+
+@media (min-width: 800px) {
+	html {
+		font-size: 80px;
+	}
+}
+
+@media (min-width: 1024px) {
+	html {
+		font-size: 102.4px;
+	}
+}
+ul,li{
+	list-style: none;
+}
+body{
+	line-height: 0.5rem;
+}
+.mui-content{
+	padding-bottom: 1.58rem;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+.mui-bar-nav~.mui-content{
+	    padding-top: 1.173rem;
+}
+.ulList .mui-table-view-cell{
+	padding:0.4rem 0.4rem
+}
+.mui-bar{
+	height: 1.17333rem;
+	padding-right: 0.27rem;
+	padding-left: 0.27rem;
+	background-color: #ffffff;
+}
+.mui-bar .mui-title{
+	right: 0.533rem;
+	left: 0.533rem;
+	height:1.17333rem;
+	line-height:  1.17333rem;
+}
+.btnEdit{
+	position: absolute;
+	right: 0.4rem;
+	height: 1.17333rem;
+	line-height:  1.17333rem;
+	font-size: 0.4rem;
+}
+.layer{
+	height: 0.27rem;
+	background: #f2f2f2;
+	border-bottom: 1px solid #e8e8e8;
+}
+.itemName{
+	height: 1.17rem;
+	line-height: 1.17rem;
+	padding: 0px 0.4rem;
+	background: #f9f9f9;
+}
+.home{
+	
+	margin-left: 0.133rem;
+}
+.icon-yuan{
+	/*color: red;*/
+	/*background: red;*/
+	/*border-radius:50% ;*/
+}
+.itemsSel{
+	margin-top:2px ;
+}
+.itemName span{
+	margin-left:0.067px ;
+	font-size: 0.4rem;
+}
+.liList{
+	/*height: 3.76rem;*/
+	background: #ffffff;
+}
+.mui-table-view-cell:after{
+	position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 15px;
+    height: 1px;
+    content: '';
+    -webkit-transform: scaleY(.5);
+    transform: scaleY(.5);
+    background-color: #c8c7cc;
+}
+.yuan{
+	line-height:3.5rem ;
+	width: 1.14rem;
+	height: 100%;
+	float: left;
+	
+}
+
+.shopName{
+	float: left;
+	width: 2.8rem;
+	line-height:3.5rem ;
+
+}
+.shopName img{
+	width: 80%;
+	height: 80%;
+	vertical-align: middle;
+}
+.shopContent{
+	float: left;
+	width: 4.79rem;
+	margin-left: 0.2rem;
+	line-height: 1rem;
+}
+.shopTitle{
+	font-family: "苹方";
+	font-size: 0.27rem;
+	font-weight: 600;
+	color: #333333;
+	line-height: 0.5rem;
+	margin-bottom:0.26rem ;
+}
+.priceLeft{
+	float: left;
+	height: 0.6rem;
+	line-height: 0.6rem;
+}
+.numRight{
+	float: right;
+	height: 0.8rem;
+	width: 2.6rem;
+	line-height: 0.8rem;
+	background: url(../images/btn_03.jpg) no-repeat;
+	background-size:100% 100% ;
+	padding-left: 0.1rem;
+	padding-right: 0.1rem;
+}
+.reduce{
+	display: inline-block;
+	width: 0.53rem;
+	text-align: center;
+	float: left;
+}
+.numRight .num{
+	/*display: inline-block;*/
+	width: 1.3rem;
+	text-align: center;
+	height:0.7rem;
+	border: none;
+	padding: 0;
+	margin: 0;
+	/*padding-left: 0.2rem;
+	padding-right: 0.2rem;*/
+				
+			}
+			.add{
+				display: inline-block;
+				width: 0.53rem;
+				text-align: center;
+				float: right;
+			}
+			.colorCenter{
+				font-size: 0.3rem;
+				margin-bottom: 0.72rem;
+			}
+			.bottomNum{
+				overflow:hidden; 
+　　				zoom:1; 
+				margin-top: 0.72rem;
+			}
+			.priceLeft{
+				color: red;
+			}
+			.bottomBar{
+				position: fixed;
+				bottom: 0;
+				height: 1.58rem;
+				width: 100%;
+				box-shadow: 0px 0px 0.1rem #b0b1b9;
+				background: #ffffff;
+				border-bottom: 1px solid #777777;
+				z-index: 11;
+			}
+			.selectAll{
+				height: 1.58rem;
+				width: 22%;
+				line-height: 1.58rem;
+				padding-left: 0.4rem;
+				float: left;
+			}
+			.selectAll span{
+				font-size: 0.35rem;
+				margin-left: 5px;
+				color: #858585;
+			}
+			.bottomContent{
+				height: 1.58rem;
+				width: 70%;
+				float: left;
+				font-size: 0.32rem;
+				text-align: right;
+				padding: 0.2rem 0;
+			}
+			.ActualPrice{
+				font-size: 0.29rem;
+				color: #858585;
+				overflow: hidden;
+				zoom: 1;
+				margin-top: 0.15rem;
+			}
+			.parentShopTotal{
+				float: left;
+				width: 64%;
+			}
+			.parentTaxation{
+				float: left;
+				width: 36%;
+				text-align: right;
+			}
+			.bottomWai{
+				width: 30%;
+				height: 1.58rem;
+				float: right;
+				overflow: hidden;
+				zoom: 1;
+			}
+			.bottomBtn{
+				width: 2rem;
+				text-align: center;
+				height: 1.58rem;
+				line-height: 1.58rem;
+				font-size: 0.47rem;
+				background: #b5b5b5;
+				float: right;
+				color: #ffffff;
+			}
+			.bottomRight{
+				float: right;
+				width: 78%;
+			}
+			.bottomRightDel{
+				float: right;
+				width: 6.94rem;
+				text-align: right;
+			}
+			.selBtn{
+				float: left;
+				height: 1.58rem;
+				text-align: right;
+				width: 4.67rem;
+				line-height: 1.58rem;
+			}
+			.delWai{
+				width: 2.27rem;
+				height: 1.58rem;
+				float: right;
+				text-align: right;
+			}
+			.delBtn{
+				display: inline-block;
+				width: 2rem;
+				text-align: center;
+				height: 1.58rem;
+				line-height: 1.58rem;
+				font-size: 0.47rem;
+				background: #b5b5b5;
+				color:#ffffff
+			}
+			.delColor{
+				background: #333333;
+			}
+			.ulList .mui-active{
+				background: #FFFFFF;
+			}
+			.bottomBtnColor{
+				background: #e93b3a;
+			}
+			.emptyBox{
+				margin: 0 auto;
+				text-align: center;
+				position: relative;
+			}
+			.emptyImg{
+				width: 3.11rem;
+				height: 2.85rem;
+				position: absolute;
+				top:2rem;
+				left:50%;
+				margin-left: -1.55rem;
+			}
+			.emptyImg img{
+				width: 100%;
+				height: 100%;
+			}
+			.emptyWord{
+				font-size: 0.3rem;
+				position: absolute;
+				width: 4.21rem;
+				height: 0.65rem;
+				position: absolute;
+				top:5.25rem;
+				left:50%;
+				margin-left: -2rem;
+				color: #999999;
+			}
+			.emptyBtn{
+				font-size: 0.38rem;
+				position: absolute;
+				width: 2.6rem;
+				height: 1.1rem;
+				position: absolute;
+				top:6.1rem;
+				left:50%;
+				margin-left: -1.3rem;
+				background: #50026a;
+				color: #ffffff;
+				line-height: 1.1rem;
+			}
+			.emptyMan{
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				background: #f2f2f2;
+			}
+			.itemName .iconfont{
+				font-size: 0.54rem;
+			}
+			.itemName .mui-icon{
+				font-size: 0.5333rem;
+    			color: #666666;
+			}
+			.yuan .iconfont{
+				font-size: 0.54rem;
+			}
+			.selectAll .iconfont{
+				font-size: 0.54rem;
+			}
+			.mui-title{
+				right:0.533rem;
+				left: 0.533rem;
+				font-size:0.453rem
+			}
+			.mui-pull-caption {
+                background-image: url(../images/list_header_info.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                /*width: 144px;
+    height: 31px;*/
+    font-size: 0px;
+}
+/*下拉刷新圆形进度条的大小和样式*/
+
+.mui-spinner {
+    width: 32px;
+    height: 32px;
+}
+.mui-spinner:after {
+    /*background-image: url(../images/.png);*/
+}
+/*下拉刷新的箭头颜色*/
+
+.mui-icon-pulldown {
+    color: #B5B5B5;
+}
+.mui-pull-loading{
+	display: none;
+}

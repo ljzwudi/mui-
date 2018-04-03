@@ -1,0 +1,56 @@
+{
+	"index.html": {
+		"resources": [
+			"html/pageOne/pageOne.html",
+			"com/js/jquery-2.2.4-.min.js",
+			"css/index.css",
+			"com/css/mui.min.css",
+			"com/css/com.css",
+			"com/js/com.js",
+			"com/js/mui.min.js"
+		],
+		"refer": [
+			"YSHOfficial/html/classify.html",
+			"YSHOfficial/html/gouwuche.html",
+			"html/mine/mine.html",
+			"html/pageOne/pageOne.html",
+			"html/discover/discover.html",
+			"html/classify/classify.html",
+			"html/gouwuche/gouwuche.html"
+		]
+	},
+	"html/pageOne/pageOne.html": {
+		"resources": [
+			"com/html/pageOneIndex.html",
+			"com/fonts/iconfont.ttf",
+			"com/fonts/mui.ttf",
+			"css/pageOne/pageOne.css",
+			"com/css/mui.min.css",
+			"com/css/com.css",
+			"com/css/iconfont.css"
+		],
+		"refer": [
+			"com/html/pageOneIndex.html"
+		]
+	},
+	"html/classify/classify.html": {
+		"refer": [
+			"html/shopdetail/shopdetail.html"
+		],
+		"resources": []
+	},
+	"html/mine/mine.html": {
+		"refer": [
+			"html/login/login.html"
+		],
+		"resources": []
+	},
+	"html/discover/discover.html": {
+		"refer": [
+			"html/discover/discoverSub/discoverSub.html"
+		],
+		"resources": [
+			"html/discover/discoverSub/discoverSub.html"
+		]
+	}
+}

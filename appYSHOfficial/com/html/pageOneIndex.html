@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>首页内容页</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet"/>
+    	<link href="../css/pageOneIndex.css" rel="stylesheet"/>
+    	<link href="../css/iconfont.css" rel="stylesheet"/>
+    	<link href="../css/com.css" rel="stylesheet"/>
+    	<script type="text/javascript">
+	        //document.documentElement.style.fontSize = document.documentElement.clientWidth / 750*100 + 'px';
+	       		//designWidth:设计稿的实际宽度值，需要根据实际设置
+			//maxWidth:制作稿的最大宽度值，需要根据实际设置
+			//这段js的最后面有两个参数记得要设置，一个为设计稿实际宽度，一个为制作稿最大宽度，例如设计稿为750，最大宽度为750，则为(750,750)
+			(function(designWidth, maxWidth) {
+				var doc = document,
+				win = window,
+				docEl = doc.documentElement, 
+				remStyle = document.createElement("style"),
+				tid;
+			
+				function refreshRem() {
+					var width = docEl.getBoundingClientRect().width;
+					maxWidth = maxWidth || 540;
+					width>maxWidth && (width=maxWidth);
+					var rem = width * 100 / designWidth;
+					remStyle.innerHTML = 'html{font-size:' + rem + 'px;}';
+				}
+			
+				if (docEl.firstElementChild) {
+					docEl.firstElementChild.appendChild(remStyle);
+				} else {
+					var wrap = doc.createElement("div");
+					wrap.appendChild(remStyle);
+					doc.write(wrap.innerHTML);
+					wrap = null;
+				}
+				//要等 wiewport 设置好后才能执行 refreshRem，不然 refreshRem 会执行2次；
+				refreshRem();
+			
+				win.addEventListener("resize", function() {
+					clearTimeout(tid); //防止执行两次
+					tid = setTimeout(refreshRem, 300);
+				}, false);
+			
+				win.addEventListener("pageshow", function(e) {
+					if (e.persisted) { // 浏览器后退的时候重新计算
+						clearTimeout(tid);
+						tid = setTimeout(refreshRem, 300);
+					}
+				}, false);
+			
+				if (doc.readyState === "complete") {
+					doc.body.style.fontSize = "16px";
+				} else {
+					doc.addEventListener("DOMContentLoaded", function(e) {
+						doc.body.style.fontSize = "16px";
+					}, false);
+				}
+			})(750, 750);
+	    </script>
+	</head>
+	<body>
+		<!--下拉刷新容器-->
+		<div id="pullrefresh" class="mui-content mui-scroll-wrapper pageOneIndexFresh">
+			<div class="mui-scroll pageOndeIndexMain">
+
+				<div class="pageOneMain" style="display: ;">
+					<div class="pageOneCar">
+						<div class="mui-slider">
+						  <div class="mui-slider-group mui-slider-loop">
+						    <!--支持循环，需要重复图片节点-->
+						    <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="../../image/b1.png" /></a></div>
+						    <div class="mui-slider-item"><a href="#"><img src="../../image/b1.png" /></a></div>
+						    <div class="mui-slider-item"><a href="#"><img src="../../image/b2.png" /></a></div>
+						    <div class="mui-slider-item"><a href="#"><img src="../../image/banner.png" /></a></div>
+						    <!--支持循环，需要重复图片节点-->
+						    <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="../../image/b1.png" /></a></div>
+						  </div>
+						</div>
+						<div class="pageOneSiteNow" id="pageOneSiteNow">
+							<span class="pageOneActive"></span>
+							<span></span>
+							<span></span>
+						</div>
+					</div> 
+					<div class="clearfix pageOneActiveModle">
+						<ul class="clearfix">
+							<li>
+								<a href="">
+									<img  src="../../image/pageOneActivity1.png" alt="" />
+									<h3>新品</h3>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<img  src="../../image/pageOneActivity2.png" alt="" />
+									<h3>秒杀</h3>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<img  src="../../image/pageOneActivity3.png" alt="" />
+									<h3>签到</h3>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<img  src="../../image/pageOneActivity4.png" alt="" />
+									<h3>折扣</h3>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<img  src="../../image/pageOneActivity5.png" alt="" />
+									<h3>折扣</h3>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="comHeight"></div>
+					<div class="pageOneCard">
+						<a href=""><img src="../../image/pageOneCard.png"  /></a>
+					</div>
+					<div class="comHeight"></div>
+					<div class="clearfix mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted pageOneSegmented pageOneIndexSegOne">
+						<div class="pageOneSeckillTop">
+							<ul class="mui-table-view mui-table-view-chevron">
+								<li class="mui-table-view-cell">
+									<a href="#about" class="mui-navigate-right">
+										<span class="pageOneseckkillSpan">
+											<i class="iconfont icon-naozhong"></i>&nbsp;秒杀&nbsp;&nbsp;
+											
+										</span> 
+										<i class="mui-pull-right update">
+											距离开始还有&nbsp;&nbsp;<span class="pageOneIndexCount">01</span>:
+											<span class="pageOneIndexCount">04</span>:
+											<span class="pageOneIndexCount">59</span>
+										</i>
+									</a>
+								</li>
+							</ul>
+						</div>
+					    <div class="clearfix mui-scroll">
+					        <a class="mui-control-item">
+					            <img  src="../../image/goodsMudle1.jpg" alt="折扣" />
+					            <p class="pageOneSegmentedTitle">DIOR迪奥旷野男...</p>
+					            <s class="pageOneSegmentedPrice">￥1498</s>
+								<h3>￥558</h3>
+					        </a>
+					        <a class="mui-control-item">
+					            <img  src="../../image/goodsMudle1.jpg" alt="折扣" />
+								<p class="pageOneSegmentedTitle">DIOR迪奥旷野男...</p>
+					            <s class="pageOneSegmentedPrice">￥1498</s>
+								<h3>￥558</h3>
+					        </a>
+					        <a class="mui-control-item">
+					            <img  src="../../image/goodsMudle1.jpg" alt="折扣" />
+								<p class="pageOneSegmentedTitle">DIOR迪奥旷野男...</p>
+					            <s class="pageOneSegmentedPrice">￥1498</s>
+								<h3>￥558</h3>
+					        </a>
+					        
+					    </div>
+					</div>
+					<div class="comHeight"></div>
+					<div class="pageOneOverseas">
+						<div class="pageOneVerCont">
+							<h3 class="pageVerH3">FENDI让你青春飞扬</h3>
+							<p class="pageOneVerHr"></p>
+							<p class="pageOneVerVice">板鞋种草</p>
+							<div class="pageOneVerMore">
+								查看更多		
+							</div>
+						</div>
+						<img src="../../image/overseas.png" />
+					</div>
+					<div class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted pageOneSegmented pageOneOverseaCont">
+					    <div class="mui-scroll">
+					        <a class="mui-control-item">
+					            <img  src="../../image/goodsMudle1.jpg" alt="折扣" />
+					            <p class="pageOneSegmentedTitle">DIOR迪奥旷野男...</p>
+								<h3>￥558</h3>
+					        </a>
+					        <a class="mui-control-item">
+					            <img  src="../../image/goodsMudle2.jpg" alt="折扣" />
+								<p class="pageOneSegmentedTitle">DIOR迪奥旷野男...</p>
+								<h3>￥558</h3>
+					        </a>
+					        <a class="mui-control-item">
+					            <img  src="../../image/goodsMudle3.jpg" alt="折扣" />
+								<p class="pageOneSegmentedTitle">DIOR迪奥旷野男...</p>
+								<h3>￥558</h3>
+					        </a>
+					    </div>
+					    <!--<div class="pageOneSegmentedMore">
+					    	<a href="">查看更多<span></span></a>
+					    </div>-->
+					</div>
+					<!--<div class="comHeight"></div>-->
+					<div class="pageOneOverseas">
+						<div class="pageOneVerCont">
+							<h3 class="pageVerH3">春季限量单品</h3>
+							<p class="pageOneVerHr"></p>
+							<p class="pageOneVerVice">单肩包更时髦</p>
+							<div class="pageOneVerMore">
+								查看更多		
+							</div>
+						</div>
+						<img src="../../image/aolai.png" />
+					</div>
+					<div class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted pageOneSegmented pageOneOverseaCont">
+					    <div class="mui-scroll">
+					        <a class="mui-control-item">
+					            <img  src="../../image/goodsMudle1.jpg" alt="折扣" />
+					            <p class="pageOneSegmentedTitle">DIOR迪奥旷野男...</p>
+								<h3>￥558</h3>
+					        </a>
+					        <a class="mui-control-item">
+					            <img  src="../../image/goodsMudle2.jpg" alt="折扣" />
+								<p class="pageOneSegmentedTitle">DIOR迪奥旷野男...</p>
+								<h3>￥558</h3>
+					        </a>
+					        <a class="mui-control-item">
+					            <img  src="../../image/goodsMudle3.jpg" alt="折扣" />
+								<p class="pageOneSegmentedTitle">DIOR迪奥旷野男...</p>
+								<h3>￥558</h3>
+					        </a>
+					    </div>
+					    <!--<div class="pageOneSegmentedMore">
+					    	<a href="">查看更多<span></span></a>
+					    </div>-->
+					</div>
+					<!--<div class="comHeight"></div>-->
+					<div class="pageOneOverseas">
+						<div class="pageOneVerCont">
+							<h3 class="pageVerH3">Cartier让你美到发光</h3>
+							<p class="pageOneVerHr"></p>
+							<p class="pageOneVerVice">使用与颜值并存</p>
+							<div class="pageOneVerMore">
+								查看更多		
+							</div>
+						</div>
+						<img src="../../image/nvshen.png" />
+					</div>
+					<div class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted pageOneSegmented pageOneOverseaCont">
+					    <div class="mui-scroll">
+					        <a class="mui-control-item">
+					            <img  src="../../image/nanshen1.jpg" alt="折扣" />
+					            <p class="pageOneSegmentedTitle">DIOR迪奥旷野男...</p>
+								<h3>￥558</h3>
+					        </a>
+					        <a class="mui-control-item">
+					            <img  src="../../image/nanshen2.jpg" alt="折扣" />
+								<p class="pageOneSegmentedTitle">DIOR迪奥旷野男...</p>
+								<h3>￥558</h3>
+					        </a>
+					        <a class="mui-control-item">
+					            <img  src="../../image/goodsMudle2.jpg" alt="折扣" />
+								<p class="pageOneSegmentedTitle">DIOR迪奥旷野男...</p>
+								<h3>￥558</h3>
+					        </a>
+					    </div>
+					</div>
+					<!--<div class="comHeight"></div>-->
+					<div class="pageOneOverseas">
+						<div class="pageOneVerCont">
+							<h3 class="pageVerH3">FENDI让你青春飞扬</h3>
+							<p class="pageOneVerHr"></p>
+							<p class="pageOneVerVice">包包专场</p>
+							<div class="pageOneVerMore">
+								查看更多		
+							</div>
+						</div>
+						<img src="../../image/nanshen.png" />
+					</div>
+					<div class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted pageOneSegmented pageOneOverseaCont">
+					    <div class="mui-scroll">
+					        <a class="mui-control-item">
+					            <img  src="../../image/nanshen1.jpg" alt="折扣" />
+					            <p class="pageOneSegmentedTitle">DIOR迪奥旷野男...</p>
+								<h3>￥558</h3>
+					        </a>
+					        <a class="mui-control-item">
+					            <img  src="../../image/goodsMudle1.jpg" alt="折扣" />
+								<p class="pageOneSegmentedTitle">DIOR迪奥旷野男...</p>
+								<h3>￥558</h3>
+					        </a>
+					        <a class="mui-control-item">
+					            <img  src="../../image/goodsMudle2.jpg" alt="折扣" />
+								<p class="pageOneSegmentedTitle">DIOR迪奥旷野男...</p>
+								<h3>￥558</h3>
+					        </a>
+					    </div>
+					    <!--<div class="pageOneSegmentedMore">
+					    	<a href="">查看更多<span></span></a>
+					    </div>-->
+					</div>
+					<div class=" clearfix pageOneIndexRelation">
+						<h3 class="pageOneIndexRelTitle">为你推荐</h3>
+						<ul class="pageOneIndexRelLeft">
+							<li class="pageOneIndexRelLeftLi">
+								<img class="pageOneIndexRelLeftImg" src="../../image/w1.jpg" />
+								<div class="pageOneRelIndexCont">
+									<h3 class="pageOneRelH3">SAINT LAURENT</h3>
+									<p class="pageOneRelP">牛仔布短款大衣</p>
+									<span class="pageOneRelSpan">
+										￥25,400
+									</span>
+								</div>
+							</li>
+							<li class="pageOneIndexRelLeftLi">
+								<img class="pageOneIndexRelLeftImg" src="../../image/w2.jpg" />
+								<div class="pageOneRelIndexCont">
+									<h3 class="pageOneRelH3">SAINT LAURENT</h3>
+									<p class="pageOneRelP">牛仔布短款大衣</p>
+									<span class="pageOneRelSpan">
+										￥25,400
+									</span>
+								</div>
+							</li>
+							<li class="pageOneIndexRelLeftLi">
+								<img class="pageOneIndexRelLeftImg" src="../../image/w3.jpg" />
+								<div class="pageOneRelIndexCont">
+									<h3 class="pageOneRelH3">SAINT LAURENT</h3>
+									<p class="pageOneRelP">牛仔布短款大衣</p>
+									<span class="pageOneRelSpan">
+										￥25,400
+									</span>
+								</div>
+							</li>
+							<li class="pageOneIndexRelLeftLi">
+								<img class="pageOneIndexRelLeftImg" src="../../image/w4.jpg" />
+								<div class="pageOneRelIndexCont">
+									<h3 class="pageOneRelH3">SAINT LAURENT</h3>
+									<p class="pageOneRelP">牛仔布短款大衣</p>
+									<span class="pageOneRelSpan">
+										￥25,400
+									</span>
+								</div>
+							</li>
+						</ul>
+						<ul class="pageOneIndexRelRight">
+							<li class="pageOneIndexRelLeftLi">
+								<img class="pageOneIndexRelLeftImg" src="../../image/w5.jpg" />
+								<div class="pageOneRelIndexCont">
+									<h3 class="pageOneRelH3">SAINT LAURENT</h3>
+									<p class="pageOneRelP">牛仔布短款大衣</p>
+									<span class="pageOneRelSpan">
+										￥25,400
+									</span>
+								</div>
+							</li>
+							<li class="pageOneIndexRelLeftLi">
+								<img class="pageOneIndexRelLeftImg" src="../../image/w1.jpg" />
+								<div class="pageOneRelIndexCont">
+									<h3 class="pageOneRelH3">SAINT LAURENT</h3>
+									<p class="pageOneRelP">牛仔布短款大衣</p>
+									<span class="pageOneRelSpan">
+										￥25,400
+									</span>
+								</div>
+							</li>
+							<li class="pageOneIndexRelLeftLi">
+								<img class="pageOneIndexRelLeftImg" src="../../image/w2.jpg" />
+								<div class="pageOneRelIndexCont">
+									<h3 class="pageOneRelH3">SAINT LAURENT</h3>
+									<p class="pageOneRelP">牛仔布短款大衣</p>
+									<span class="pageOneRelSpan">
+										￥25,400
+									</span>
+								</div>
+							</li>
+							<li class="pageOneIndexRelLeftLi">
+								<img class="pageOneIndexRelLeftImg" src="../../image/w3.jpg" />
+								<div class="pageOneRelIndexCont">
+									<h3 class="pageOneRelH3">SAINT LAURENT</h3>
+									<p class="pageOneRelP">牛仔布短款大衣</p>
+									<span class="pageOneRelSpan">
+										￥25,400
+									</span>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				
+					<div style="height: 40px;"></div>
+			</div>
+		</div>
+    	<script src="../js/mui.min.js"></script>
+    	<script src="../js/jquery-2.2.4-.min.js"></script>
+    	<script src="../../com/js/com.js"></script>
+    	<script src="../js/pageOneIndex.js"></script>
+	</body>
+</html>

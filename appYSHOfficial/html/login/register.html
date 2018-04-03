@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>注册</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="../../com/css/mui.min.css">
+		<link href="../../com/css/iconfont.css" rel="stylesheet"/>
+		<link href="../../css/login/register.css" rel="stylesheet"/>
+		<!--App自定义的css-->
+		<style>
+			
+		</style>
+		<script type="text/javascript">
+	        //document.documentElement.style.fontSize = document.documentElement.clientWidth / 750*75 + 'px';
+	        //designWidth:设计稿的实际宽度值，需要根据实际设置
+			//maxWidth:制作稿的最大宽度值，需要根据实际设置
+			//这段js的最后面有两个参数记得要设置，一个为设计稿实际宽度，一个为制作稿最大宽度，例如设计稿为750，最大宽度为750，则为(750,750)
+			;(function(designWidth, maxWidth) {
+				var doc = document,
+				win = window,
+				docEl = doc.documentElement,
+				remStyle = document.createElement("style"),
+				tid;
+			
+				function refreshRem() {
+					var width = docEl.getBoundingClientRect().width;
+					maxWidth = maxWidth || 750;
+					width>maxWidth && (width=maxWidth);
+					var rem = width * 75 / designWidth;
+					remStyle.innerHTML = 'html{font-size:' + rem + 'px;}';
+				}
+			
+				if (docEl.firstElementChild) {
+					docEl.firstElementChild.appendChild(remStyle);
+				} else {
+					var wrap = doc.createElement("div");
+					wrap.appendChild(remStyle);
+					doc.write(wrap.innerHTML);
+					wrap = null;
+				}
+				//要等 wiewport 设置好后才能执行 refreshRem，不然 refreshRem 会执行2次；
+				refreshRem();
+			
+				win.addEventListener("resize", function() {
+					clearTimeout(tid); //防止执行两次
+					tid = setTimeout(refreshRem, 300);
+				}, false);
+			
+				win.addEventListener("pageshow", function(e) {
+					if (e.persisted) { // 浏览器后退的时候重新计算
+						clearTimeout(tid);
+						tid = setTimeout(refreshRem, 300);
+					}
+				}, false);
+			
+				if (doc.readyState === "complete") {
+					doc.body.style.fontSize = "16px";
+				} else {
+					doc.addEventListener("DOMContentLoaded", function(e) {
+						doc.body.style.fontSize = "16px";
+					}, false);
+				}
+			})(750, 750);
+	    </script>
+	</head>
+
+	<body>
+		<div class="mui-content mui-row mui-fullscreen">
+			<div class="register">
+				<div class="registerTitle">注册</div>
+				<div class="registerWord">已有账号，立即<span class="registerTrunLogin"><a id="registerTrunLogin" href="login.html">登录</a></span></div>
+			</div>
+			<div class="registerInputBox">
+				<div class="registerInputPhone registerCss"><input type="text" placeholder="手机号" id="registerInputPhone"/></div>
+				<div class="registerInputSms registerCss">
+					<input type="text" placeholder="短信验证码" id="registerInputSmsCode"/>
+					<span class="registerCode">获取验证码</span>
+				</div>
+				<div class="registerInputPsd registerCss"><input type="password" placeholder="请输入6~20位密码" id="registerInputPsd"/></div>
+				<a href=""><div class="registerBtn mui-action-back" id="registerBtn">注册</div></a>
+			</div>
+			<div class="registerXieyi">注册代表同意<span>《注册协议》</span></div>
+		</div>
+		<script src="../../com/js/mui.min.js"></script>
+		<script src="../../com/js/jquery-2.2.4-.min.js"></script>
+		<script src="../../js/login/register.js"></script>
+		<script>
+			mui.init({
+				swipeBack: true //启用右滑关闭功能
+			});
+			
+		</script>
+
+	</body>
+
+</html>

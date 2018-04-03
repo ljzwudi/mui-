@@ -1,0 +1,487 @@
+/*cssWebAdd*/
+.mui-segmented-control.mui-scroll-wrapper .mui-control-item {
+    padding: 0 11px;
+    }
+/*header*/
+.mui-bar input[type=search] {
+    height: 0.62rem;
+    margin: 0.13rem 0;
+    font-size: 0.28rem;
+    border-radius: 0.03rem;
+}
+.mui-search {
+    position: relative;
+    right: 0.36rem;
+    left: 0.20rem;
+    display: inline-block;
+    overflow: hidden;
+    margin: 0;
+    text-overflow: ellipsis;
+    width: 5.98rem;
+}
+.mui-search .mui-placeholder{
+	font-size: 0.28rem;
+	line-height: 0.32rem;
+	height: 0.32rem;
+	border-radius: 0.06rem;
+}
+
+input[type=search] {
+    background-color: #f0f0f0;
+    color: #8f8f8f;
+}
+.mui-bar-nav.mui-bar .mui-icon {
+    margin-right: -0.1rem;
+    margin-left: -0.1rem;
+    padding-right: 0.1rem;
+    padding-left: 0.1rem;
+}
+
+.mui-bar .mui-icon {
+    font-size: 0.39rem;
+    position: relative;
+    z-index: 20;
+    padding-top: 0.25rem;
+    padding-bottom: 0.1rem;
+}
+
+/*.mui-bar {
+    height: 0.88rem;
+    overflow: hidden;
+    padding-right: 0.2rem;
+    padding-left: 0.2rem;
+}*/
+
+.mui-search .mui-placeholder .mui-icon{
+	font-size: 0.4rem;
+}
+
+.mui-bar {
+    background-color: #ffffff;
+    -webkit-box-shadow: 0 0 0px rgba(0,0,0,.85);
+    box-shadow: 0 0 0px rgba(0,0,0,.85);
+}
+
+
+/*content*/
+.mui-iframe-wrapper {
+    position: fixed;
+}
+.pageOneIndexFresh{
+	background: #ffffff;
+}
+.pageOndeIndexMain{
+	padding-bottom: 0.4rem;
+}
+.mui-pull-top-pocket{
+	top: 0.88rem;
+}
+.pageOneHeader{
+	position: fixed;
+	top: 0;
+	z-index: 100000;
+	
+}
+
+body{
+	background-color: #ffffff;
+}
+.pageOneBody{
+	
+}
+.pageOneMain{
+	padding-top: 0rem;
+	position: relative;
+	z-index: 1000;
+}
+.pageOneBg{
+	width: 100%;
+}
+
+
+.pageOneSearch{
+	
+}
+.pageOneCar{
+	position: relative;
+}
+
+.pageOneSiteNow{
+	position: absolute;
+	bottom: 0.1rem;
+	width: 100%;
+	z-index: 1;
+	left: 0;
+	text-align: center;
+}
+.pageOneSiteNow span{
+	display: inline-block;
+	border-radius: 100%;
+	width: 0.2rem;
+	height: 0.2rem;
+	margin-right: 0.2rem;
+	border: 1px solid #fff;
+	background-color: #ccc;
+}
+
+.pageOneActiveModle{
+	position: relative;
+	z-index: 1;
+	padding-top: 0.4rem;
+	padding-bottom: 0.35rem;
+}
+
+.pageOneSiteNow .pageOneActive{
+	background: #FFFFFF;
+}
+
+.pageOneActiveModle li{
+	float: left;
+	width: 20%;
+	text-align: center;
+}
+
+.pageOneActiveModle a img{
+	width: 1.12rem;
+}
+
+.pageOneActiveModle a h3{
+	font-size: 0.26rem;
+	font-weight: 500;
+	margin-top: -0.04rem;
+}
+
+.pageOneCard{
+	text-align: center;
+	z-index: 1;
+	position: relative;
+	line-height: 0;
+}
+
+.pageOneCard img{
+	width: 7.5rem;
+}
+.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active{
+	border-bottom: 0;
+	color: #000000;
+}
+.mui-scroll-wrapper {
+}
+
+.mui-segmented-control.mui-scroll-wrapper{
+	margin-top: 0.3rem;
+	position: relative;
+}
+.pageOneOverseaCont.mui-scroll-wrapper{
+	height: 3.28rem;
+	margin-top: 0;
+	position: relative;
+}
+.mui-segmented-control.mui-scroll-wrapper .mui-scroll{
+	padding-top: 0.62rem;
+	padding-bottom: 0.62rem;
+	height: auto;
+	transform: translate3d(0px, 0px, 0px) translateZ(0px);
+	transition-timing-function: cubic-bezier(0, 0.84, 0.44, 1);
+}
+
+.pageOneSegmented{
+	position: relative;
+	z-index: 1;
+	width: 100%;
+	/* height: 1rem; */
+}
+.pageOneSegmented .mui-scroll{
+	
+}
+
+.pageOneSegmented .mui-control{
+	
+}
+.mui-table-view:after{
+	height: 0;
+}
+.pageOneSegmented img{
+	
+height: 1.80rem;
+}
+.pageOneSegmented h3{
+	
+font-size: 0.3rem;
+	
+font-weight: 500;
+}
+.pageOneSegmentedTitle{
+	
+height: 0.48rem;
+	
+line-height: 0.48rem;
+	
+width: 1.96rem;
+	
+overflow: hidden;
+	
+text-overflow:ellipsis;
+	
+white-space: nowrap;
+	
+font-size: 0.24rem;
+}
+.pageOneSegmentedPrice{
+	
+color: #aeadad;
+	
+font-size: 0.24rem;
+}
+
+.mui-segmented-control .mui-control-item{
+	line-height: 0.4rem;
+}
+.pageOneSeckillTop{
+	
+position: relative;
+	
+width: 6.9rem;
+	
+margin: 0 auto;
+
+}
+.mui-table-view:before{
+	height: 0;
+}
+.update {
+    font-style: normal;
+    color: #999999;
+    margin-right: 0;
+    font-size: 0.24rem;
+}
+
+.pageOneSeckillTop a{
+
+}
+.pageOneSeckillTop img{
+	
+width: 90%;
+	
+height: 0.36rem;
+}
+
+.pageOneOverseas{
+	
+position: relative;
+	
+z-index: 1;
+	
+text-align: center;
+}
+.pageOneOverseas h3{
+	font-size: 0.4rem;
+	font-weight: 500;
+	line-height: 0.4rem;
+	padding: 0;
+	margin-top: 1.20rem;
+	color: #fff;
+}
+.pageOneOverseas img{
+	
+width: 7.5rem;
+}
+
+.pageOneSegmentedMore{
+	
+position: absolute;
+	
+z-index: 1;
+	
+bottom: 0;
+	
+width: 100%;
+	
+padding-bottom: 10px;
+}
+.pageOneSegmentedMore a{
+	line-height: 0.6rem;
+	font-size: 0.28rem;	
+	color: #707070;
+}
+.pageOneSegmentedMore span{
+    font-size: 0;
+    line-height: 0;
+    border-width: 0.08rem;
+    border-color: #666666;
+    border-right-width: 0;
+    border-style: dashed;
+    border-left-style: solid;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    vertical-align: middle;
+    margin-left: 0.1rem;
+}
+
+.mui-table-view-chevron .mui-table-view-cell>a:not(.mui-btn){
+	text-align: left;
+	margin-right: -1.56rem;
+	margin: 0;
+	width: 6.9rem;
+}
+
+.pageOneseckkillSpan{
+	color: #d23232;
+	font-size: 0.34rem;
+	font-weight: 500;
+	vertical-align: top;
+}
+.mui-table-view-cell{
+	padding: 0;
+	width: 6.9rem;
+	padding-right: 0;
+}
+
+
+.mui-navigate-right:after, .mui-push-left:after, .mui-push-right:after{
+	top: 48%;
+	
+}
+.pageOneIndexCount{
+	background-color: #000000;
+	border-radius: 0.04rem;
+	padding: 0.04rem;
+	color: #FFFFFF;
+	font-size: 0.22rem;
+	vertical-align: top;
+}
+
+.mui-slider {
+    width: 7.5rem;
+    height: 5rem;
+}
+
+.mui-slider .mui-slider-group .mui-slider-item img{
+    width: 7.5rem;
+    height: 5rem;
+}
+
+.mui-table-view-chevron .mui-table-view-cell {
+    padding-right: 0;
+}
+
+.mui-navigate-right:after, .mui-push-right:after {
+    right: -26px;
+}
+    
+.mui-segmented-control.mui-scroll-wrapper {
+    height: 4.0rem;
+}
+
+.pageOneVerCont{
+	
+position: absolute;
+	
+width: 100%;
+	
+text-align: center;
+}
+.pageVerH3{
+	
+}
+.pageOneVerHr{
+    margin-top: 0.2rem;
+    height: 0.04rem;
+    background-color: #fff;
+    width: 0.84rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.pageOneVerVice{
+	
+font-size: 0.28rem;
+	
+color: #fff;
+	
+line-height: 0.28rem;
+	
+margin-top: 0.2rem;
+}
+.pageOneVerMore{
+	
+border: 1px solid #fff;
+	
+width: 1.32rem;
+	
+height: 0.52rem;
+	
+text-align: center;
+	
+color: #fff;
+	
+font-size: 0.24rem;
+	
+line-height: 0.52rem;
+	
+margin: 0.4rem auto;
+}
+
+
+.mui-segmented-control.pageOneIndexSegOne{
+	height: 4.4rem;
+}
+
+ .pageOneIndexRelation{
+ 	
+width: 6.90rem;
+ 	
+margin: 0 auto;
+ }
+.pageOneIndexRelLeft{
+    width: 50%;
+    float: left;
+    width: 3.35rem;
+}
+.pageOneIndexRelLeftImg{
+	
+width: 100%;
+}
+.pageOneRelIndexCont{
+	
+text-align: center;
+}
+.pageOneRelH3{
+	
+font-size: 0.28rem;
+	
+margin-top: 0.24rem;
+}
+.pageOneRelP{
+    font-size: 0.24rem;
+    line-height: 0.24rem;
+    margin-top: 0.24rem;
+}
+.pageOneRelSpan{
+	
+font-size: 0.32rem;
+	
+line-height: 0.32rem;
+	
+margin-top: 0.24rem;
+	
+display: inline-block;
+	
+margin-bottom: 0.24rem;
+}
+.pageOneIndexRelLeftLi{
+	width: 100%;
+	border: 1px solid #e6e6e6;
+	margin-bottom: 0.2rem;
+}
+
+.pageOneIndexRelRight{
+	float: right;
+	width: 3.35rem;
+}
+.pageOneIndexRelTitle{
+	text-align: center;
+	font-size: 0.36rem;
+	font-weight: 500;
+	margin-bottom: 0.5rem;
+}
